@@ -90,5 +90,7 @@ function setStorage(IStorage _storage) onlyOwner external {
 	store = _storage;
 }
 
+function registerPatient(string memory _name, uint8 _age,uint8 _contact,uint256 _aadhar, string memory _permanentAdd,address _patient) onlyadmin initialized public {
+          store.registerPatient(_name, _age,_contact,_aadhar,_permanentAdd, msg.sender);
     }
 }
