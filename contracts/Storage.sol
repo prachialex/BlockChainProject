@@ -10,6 +10,7 @@ contract Storage{
         uint8 contactNo;
         uint256 aadhar;
         string permanentAddress;
+
     }
     uint256 public _patientCounter;
     mapping(address => uint256) private _patientIds;
@@ -35,4 +36,8 @@ contract Storage{
         _patientIds[_patient] = _patientCounter;
         _patients[_patientCounter] = patient;
     }
+    
+    //function login(uint256 _aadhar) initialized public {
+       // uint256 patientId = _patientIds[_patient];
+   // }
 }
