@@ -3,6 +3,7 @@ pragma solidity ^0.8.0;
 import "./Admin.sol";
 contract Lab {
   
+  //add multiple labs
   uint256 labId;
   bool approved;
   string result;
