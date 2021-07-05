@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Admin is Ownable {
     
     IStorage public store;
-	Lab public labInst;
+    Lab public labInst;
 
     modifier initialized () {
         require( store != IStorage(address(0)), "admin: storage not initialized" );
@@ -28,6 +28,6 @@ contract Admin is Ownable {
     }
 
 	function approveLabs(address _lab) onlyOwner external{
-		labInstance.requestArray[_lab].approved=true;							// needs to be done for mapping 
+		labInst.requestArray[_lab].approved=true;							// needs to be done for multiple labs
 	}
 }
